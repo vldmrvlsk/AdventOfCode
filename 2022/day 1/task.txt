@@ -1,0 +1,120 @@
+--- Day 1: Calorie Counting ---
+Santa's reindeer typically eat regular reindeer food, but they need a lot of magical energy to deliver presents on Christmas. For that, their favorite snack is a special type of star fruit that only grows deep in the jungle. The Elves have brought you on their annual expedition to the grove where the fruit grows.
+
+To supply enough magical energy, the expedition needs to retrieve a minimum of fifty stars by December 25th. Although the Elves assure you that the grove has plenty of fruit, you decide to grab any fruit you see along the way, just in case.
+
+Collect stars by solving puzzles. Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first. Each puzzle grants one star. Good luck!
+
+The jungle must be too overgrown and difficult to navigate in vehicles or access from the air; the Elves' expedition traditionally goes on foot. As your boats approach land, the Elves begin taking inventory of their supplies. One important consideration is food - in particular, the number of Calories each Elf is carrying (your puzzle input).
+
+The Elves take turns writing down the number of Calories contained by the various meals, snacks, rations, etc. that they've brought with them, one item per line. Each Elf separates their own inventory from the previous Elf's inventory (if any) by a blank line.
+
+For example, suppose the Elves finish writing their items' Calories and end up with the following list:
+
+1000
+2000
+3000
+
+4000
+
+5000
+6000
+
+7000
+8000
+9000
+
+10000
+This list represents the Calories of the food carried by five Elves:
+
+The first Elf is carrying food with 1000, 2000, and 3000 Calories, a total of 6000 Calories.
+The second Elf is carrying one food item with 4000 Calories.
+The third Elf is carrying food with 5000 and 6000 Calories, a total of 11000 Calories.
+The fourth Elf is carrying food with 7000, 8000, and 9000 Calories, a total of 24000 Calories.
+The fifth Elf is carrying one food item with 10000 Calories.
+In case the Elves get hungry and need extra snacks, they need to know which Elf to ask: they'd like to know how many Calories are being carried by the Elf carrying the most Calories. In the example above, this is 24000 (carried by the fourth Elf).
+
+Find the Elf carrying the most Calories. How many total Calories is that Elf carrying?
+
+Your puzzle answer was 69693.
+
+--- Part Two ---
+By the time you calculate the answer to the Elves' question, they've already realized that the Elf carrying the most Calories of food might eventually run out of snacks.
+
+To avoid this unacceptable situation, the Elves would instead like to know the total Calories carried by the top three Elves carrying the most Calories. That way, even if one of those Elves runs out of snacks, they still have two backups.
+
+In the example above, the top three Elves are the fourth Elf (with 24000 Calories), then the third Elf (with 11000 Calories), then the fifth Elf (with 10000 Calories). The sum of the Calories carried by these three elves is 45000.
+
+Find the top three Elves carrying the most Calories. How many Calories are those Elves carrying in total?
+
+Your puzzle answer was 200945.
+
+Both parts of this puzzle are complete! They provide two gold stars: **
+
+At this point, you should return to your Advent calendar and try another puzzle.
+
+If you still want to see it, you can get your puzzle input.
+
+
+
+__________________________________________________________________________
+
+
+
+
+--- День 1: подсчет калорий ---
+Олени Санты обычно питаются обычной оленьей едой, но им нужно много магической энергии , чтобы доставлять подарки на Рождество. Для этого их любимой закуской является особый вид звездчатого фрукта, который растет только глубоко в джунглях. Эльфы привели вас в свою ежегодную экспедицию в рощу, где растут фрукты.
+
+Чтобы обеспечить достаточное количество магической энергии, экспедиция должна собрать как минимум пятьдесят звезд к 25 декабря. Хотя эльфы уверяют вас, что в роще много фруктов, вы решаете взять все фрукты, которые встретите по пути, на всякий случай.
+
+Собирайте звезды, решая головоломки. Каждый день в Адвент-календаре будут доступны две головоломки; вторая головоломка разблокируется, когда вы закончите первую. Каждая головоломка дает одну звезду . Удачи!
+
+Джунгли должны быть слишком заросшими и трудными для навигации на транспортных средствах или доступа с воздуха; Экспедиция эльфов традиционно идет пешком. Когда ваши лодки приближаются к берегу, эльфы начинают проводить инвентаризацию своих припасов. Одним из важных соображений является еда — в частности, количество калорий , которое несет каждый эльф (ваш вход в головоломку).
+
+Эльфы по очереди записывают количество калорий, содержащихся в различных блюдах, закусках, пайках и т. д. , которые они принесли с собой, по одному пункту в строке. Каждый эльф отделяет свой инвентарь от инвентаря предыдущего эльфа (если он есть) пустой строкой.
+
+Например, предположим, что эльфы закончили записывать калории своих предметов и получили следующий список:
+
+1000
+2000
+3000
+
+4000
+
+5000
+6000
+
+7000
+8000
+9000
+
+10000
+В этом списке представлены калории еды, которую несут пять эльфов:
+
+Первый эльф несет еду с 1000, 2000и 3000калориями, всего 6000калорий.
+Второй эльф несет одну еду с 4000калориями.
+Третий Эльф несет еду 5000и 6000Калории, всего 11000Калорий.
+Четвертый эльф несет еду с 7000, 8000и 9000калориями, всего 24000калорий.
+Пятый эльф несет одну еду с 10000калориями.
+В случае, если эльфы проголодаются и им понадобятся дополнительные закуски, им нужно знать, у какого эльфа спросить: они хотели бы знать, сколько калорий несет эльф, несущий наибольшее количество калорий. В приведенном выше примере это 24000(несет четвертый эльф).
+
+Найдите эльфа с наибольшим количеством калорий. Сколько всего калорий несет этот эльф?
+
+Ваш ответ на загадку был 69693.
+
+--- Часть вторая ---
+К тому времени, как вы подсчитаете ответ на вопрос эльфов, они уже осознают, что у эльфа с наибольшим количеством калорий еды может в конечном итоге закончиться закуска .
+
+Чтобы избежать этой неприемлемой ситуации, эльфы вместо этого хотели бы знать общее количество калорий, которые несут тройка лучших эльфов, несущих наибольшее количество калорий. Таким образом, даже если у одного из этих эльфов закончатся закуски, у него все равно будет два запасных варианта.
+
+В приведенном выше примере три лучших эльфа — это четвертый эльф (с 24000калориями), затем третий эльф (с 11000калориями), затем пятый эльф (с 10000калориями). Сумма Калорий, переносимых этими тремя эльфами, равна 45000.
+
+Найдите трех лучших эльфов, несущих наибольшее количество калорий. Сколько калорий в общей сложности несут эти эльфы?
+
+Ваш ответ на загадку был 200945.
+
+Обе части этой головоломки завершены! Они дают две золотые звезды: **
+
+На этом этапе вы должны вернуться к своему адвент-календарю и попробовать другую головоломку.
+
+Если вы все еще хотите увидеть это, вы можете получить входную информацию для головоломки .
