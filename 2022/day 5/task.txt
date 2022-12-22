@@ -1,0 +1,221 @@
+--- Day 5: Supply Stacks ---
+The expedition can depart as soon as the final supplies have been unloaded from the ships. Supplies are stored in stacks of marked crates, but because the needed supplies are buried under many other crates, the crates need to be rearranged.
+
+The ship has a giant cargo crane capable of moving crates between stacks. To ensure none of the crates get crushed or fall over, the crane operator will rearrange them in a series of carefully-planned steps. After the crates are rearranged, the desired crates will be at the top of each stack.
+
+The Elves don't want to interrupt the crane operator during this delicate procedure, but they forgot to ask her which crate will end up where, and they want to be ready to unload them as soon as possible so they can embark.
+
+They do, however, have a drawing of the starting stacks of crates and the rearrangement procedure (your puzzle input). For example:
+
+    [D]    
+[N] [C]    
+[Z] [M] [P]
+ 1   2   3 
+
+move 1 from 2 to 1
+move 3 from 1 to 3
+move 2 from 2 to 1
+move 1 from 1 to 2
+In this example, there are three stacks of crates. Stack 1 contains two crates: crate Z is on the bottom, and crate N is on top. Stack 2 contains three crates; from bottom to top, they are crates M, C, and D. Finally, stack 3 contains a single crate, P.
+
+Then, the rearrangement procedure is given. In each step of the procedure, a quantity of crates is moved from one stack to a different stack. In the first step of the above rearrangement procedure, one crate is moved from stack 2 to stack 1, resulting in this configuration:
+
+[D]        
+[N] [C]    
+[Z] [M] [P]
+ 1   2   3 
+In the second step, three crates are moved from stack 1 to stack 3. Crates are moved one at a time, so the first crate to be moved (D) ends up below the second and third crates:
+
+        [Z]
+        [N]
+    [C] [D]
+    [M] [P]
+ 1   2   3
+Then, both crates are moved from stack 2 to stack 1. Again, because crates are moved one at a time, crate C ends up below crate M:
+
+        [Z]
+        [N]
+[M]     [D]
+[C]     [P]
+ 1   2   3
+Finally, one crate is moved from stack 1 to stack 2:
+
+        [Z]
+        [N]
+        [D]
+[C] [M] [P]
+ 1   2   3
+The Elves just need to know which crate will end up on top of each stack; in this example, the top crates are C in stack 1, M in stack 2, and Z in stack 3, so you should combine these together and give the Elves the message CMZ.
+
+After the rearrangement procedure completes, what crate ends up on top of each stack?
+
+Your puzzle answer was FCVRLMVQP.
+
+--- Part Two ---
+As you watch the crane operator expertly rearrange the crates, you notice the process isn't following your prediction.
+
+Some mud was covering the writing on the side of the crane, and you quickly wipe it away. The crane isn't a CrateMover 9000 - it's a CrateMover 9001.
+
+The CrateMover 9001 is notable for many new and exciting features: air conditioning, leather seats, an extra cup holder, and the ability to pick up and move multiple crates at once.
+
+Again considering the example above, the crates begin in the same configuration:
+
+    [D]    
+[N] [C]    
+[Z] [M] [P]
+ 1   2   3 
+Moving a single crate from stack 2 to stack 1 behaves the same as before:
+
+[D]        
+[N] [C]    
+[Z] [M] [P]
+ 1   2   3 
+However, the action of moving three crates from stack 1 to stack 3 means that those three moved crates stay in the same order, resulting in this new configuration:
+
+        [D]
+        [N]
+    [C] [Z]
+    [M] [P]
+ 1   2   3
+Next, as both crates are moved from stack 2 to stack 1, they retain their order as well:
+
+        [D]
+        [N]
+[C]     [Z]
+[M]     [P]
+ 1   2   3
+Finally, a single crate is still moved from stack 1 to stack 2, but now it's crate C that gets moved:
+
+        [D]
+        [N]
+        [Z]
+[M] [C] [P]
+ 1   2   3
+In this example, the CrateMover 9001 has put the crates in a totally different order: MCD.
+
+Before the rearrangement process finishes, update your simulation so that the Elves know where they should stand to be ready to unload the final supplies. After the rearrangement procedure completes, what crate ends up on top of each stack?
+
+Your puzzle answer was RWLWGJGFD.
+
+Both parts of this puzzle are complete! They provide two gold stars: **
+
+At this point, you should return to your Advent calendar and try another puzzle.
+
+If you still want to see it, you can get your puzzle input.
+
+
+
+
+
+
+
+
+
+_____________________________________________________________________________________________________
+
+
+
+--- День 5: Стопки снабжения ---
+Экспедиция может отправиться, как только последние припасы будут выгружены с кораблей. Припасы хранятся в штабелях помеченных ящиков , но поскольку необходимые припасы спрятаны под множеством других ящиков, ящики нужно переставлять.
+
+На корабле есть гигантский грузовой кран , способный перемещать ящики между штабелями. Чтобы гарантировать, что ни один из ящиков не раздавится и не упадет, оператор крана переставляет их в ряд тщательно спланированных шагов. После того, как ящики будут переставлены, нужные ящики будут в верхней части каждой стопки.
+
+Эльфы не хотят мешать крановщику во время этой деликатной процедуры, но они забыли спросить ее , где окажется какой ящик, и хотят быть готовыми выгрузить их как можно скорее, чтобы они могли погрузиться.
+
+Однако у них есть чертеж начальных стопок ящиков и процедуры перестановки (ваш ввод головоломки). Например:
+
+    [D]    
+[N] [C]    
+[Z] [M] [P]
+ 1   2   3 
+
+move 1 from 2 to 1
+move 3 from 1 to 3
+move 2 from 2 to 1
+move 1 from 1 to 2
+В этом примере есть три стопки ящиков. Стек 1 содержит два ящика: ящик Zвнизу и ящик Nсверху. Стек 2 содержит три ящика; снизу вверх, это ящики M, Cи D. Наконец, стек 3 содержит один ящик, P.
+
+Затем дается процедура перегруппировки. На каждом этапе процедуры некоторое количество ящиков перемещается из одного штабеля в другой штабель. На первом этапе описанной выше процедуры перестановки один ящик перемещается из стопки 2 в стопку 1, в результате чего получается следующая конфигурация:
+
+[D]        
+[N] [C]    
+[Z] [M] [P]
+ 1   2   3 
+На втором этапе три ящика перемещаются из стопки 1 в стопку 3. Ящики перемещаются по одному , поэтому первый перемещаемый ящик ( D) оказывается ниже второго и третьего ящиков:
+
+        [Z]
+        [N]
+    [C] [D]
+    [M] [P]
+ 1   2   3
+Затем оба ящика перемещаются из стека 2 в стек 1. Опять же, поскольку ящики перемещаются по одному , ящик Cоказывается ниже ящика M:
+
+        [Z]
+        [N]
+[M]     [D]
+[C]     [P]
+ 1   2   3
+Наконец, один ящик перемещается из стека 1 в стек 2:
+
+        [Z]
+        [N]
+        [D]
+[C] [M] [P]
+ 1   2   3
+Эльфам просто нужно знать, какой ящик окажется на вершине каждой стопки ; в этом примере верхние ящики находятся Cв стопке 1, Mв стопке 2 и Zв стопке 3, поэтому вы должны объединить их вместе и передать сообщение эльфам CMZ.
+
+После завершения процедуры перестановки какой ящик окажется на вершине каждой стопки?
+
+Ваш ответ на загадку был FCVRLMVQP.
+
+--- Часть вторая ---
+Когда вы наблюдаете, как крановщик мастерски переставляет ящики, вы замечаете, что процесс не соответствует вашему прогнозу.
+
+Грязь покрывала надпись сбоку крана, и ты быстро ее стираешь. Это не CrateMover 9000, а CrateMover 9001 .
+
+CrateMover 9001 примечателен многими новыми и интересными функциями: кондиционером, кожаными сиденьями, дополнительным подстаканником и возможностью поднимать и перемещать несколько ящиков одновременно .
+
+Опять же, учитывая приведенный выше пример, ящики начинаются с одинаковой конфигурации:
+
+    [D]    
+[N] [C]    
+[Z] [M] [P]
+ 1   2   3 
+Перемещение одного ящика из стека 2 в стек 1 происходит так же, как и раньше:
+
+[D]        
+[N] [C]    
+[Z] [M] [P]
+ 1   2   3 
+Однако действие по перемещению трех ящиков из стопки 1 в стопку 3 означает, что эти три перемещенных ящика остаются в том же порядке , что приводит к следующей конфигурации:
+
+        [D]
+        [N]
+    [C] [Z]
+    [M] [P]
+ 1   2   3
+Затем, когда оба ящика перемещаются из стопки 2 в стопку 1, они также сохраняют свой порядок :
+
+        [D]
+        [N]
+[C]     [Z]
+[M]     [P]
+ 1   2   3
+Наконец, один ящик по-прежнему перемещается из стека 1 в стек 2, но теперь Cперемещается именно ящик:
+
+        [D]
+        [N]
+        [Z]
+[M] [C] [P]
+ 1   2   3
+В этом примере CrateMover 9001 расположил ящики в совершенно другом порядке: MCD.
+
+Прежде чем процесс перестановки завершится, обновите свою симуляцию, чтобы эльфы знали, где они должны стоять, чтобы быть готовыми выгрузить последние припасы. После завершения процедуры перестановки какой ящик окажется на вершине каждой стопки?
+
+Ваш ответ на загадку был RWLWGJGFD.
+
+Обе части этой головоломки завершены! Они дают две золотые звезды: **
+
+На этом этапе вы должны вернуться к своему адвент-календарю и попробовать другую головоломку.
+
+Если вы все еще хотите увидеть это, вы можете получить входную информацию для головоломки .
