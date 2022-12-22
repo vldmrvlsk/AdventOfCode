@@ -15,3 +15,31 @@ for i in range(14, len(input)):
     if len(s) == 14:
         print("2 done: ", i)
         break
+
+
+# with open('input.txt') as file:
+#     data = file.readline()
+
+# lenghtNeeded = 4
+# letters = [' '] * lenghtNeeded
+# index = 0 
+# for letter in data:
+#     index += 1
+#     letters = letters[1:]
+#     letters.append(letter)
+#     if len(set(letters)) == lenghtNeeded and letters[0] != ' ':
+#         print("1 done: ", index)
+#         break
+
+
+
+# lenghtNeeded = 14
+# letters = [' '] * lenghtNeeded
+# index = 0 
+# for letter in data:
+#     index += 1
+#     letters = letters[1:]
+#     letters.append(letter)
+#     if len(set(letters)) == lenghtNeeded and letters[0] != ' ':
+#         print("2 done: ", index)
+#         break
