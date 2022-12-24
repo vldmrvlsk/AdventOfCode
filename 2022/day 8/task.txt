@@ -1,0 +1,156 @@
+--- Day 8: Treetop Tree House ---
+The expedition comes across a peculiar patch of tall trees all planted carefully in a grid. The Elves explain that a previous expedition planted these trees as a reforestation effort. Now, they're curious if this would be a good location for a tree house.
+
+First, determine whether there is enough tree cover here to keep a tree house hidden. To do this, you need to count the number of trees that are visible from outside the grid when looking directly along a row or column.
+
+The Elves have already launched a quadcopter to generate a map with the height of each tree (your puzzle input). For example:
+
+30373
+25512
+65332
+33549
+35390
+Each tree is represented as a single digit whose value is its height, where 0 is the shortest and 9 is the tallest.
+
+A tree is visible if all of the other trees between it and an edge of the grid are shorter than it. Only consider trees in the same row or column; that is, only look up, down, left, or right from any given tree.
+
+All of the trees around the edge of the grid are visible - since they are already on the edge, there are no trees to block the view. In this example, that only leaves the interior nine trees to consider:
+
+The top-left 5 is visible from the left and top. (It isn't visible from the right or bottom since other trees of height 5 are in the way.)
+The top-middle 5 is visible from the top and right.
+The top-right 1 is not visible from any direction; for it to be visible, there would need to only be trees of height 0 between it and an edge.
+The left-middle 5 is visible, but only from the right.
+The center 3 is not visible from any direction; for it to be visible, there would need to be only trees of at most height 2 between it and an edge.
+The right-middle 3 is visible from the right.
+In the bottom row, the middle 5 is visible, but the 3 and 4 are not.
+With 16 trees visible on the edge and another 5 visible in the interior, a total of 21 trees are visible in this arrangement.
+
+Consider your map; how many trees are visible from outside the grid?
+
+Your puzzle answer was 1679.
+
+--- Part Two ---
+Content with the amount of tree cover available, the Elves just need to know the best spot to build their tree house: they would like to be able to see a lot of trees.
+
+To measure the viewing distance from a given tree, look up, down, left, and right from that tree; stop if you reach an edge or at the first tree that is the same height or taller than the tree under consideration. (If a tree is right on the edge, at least one of its viewing distances will be zero.)
+
+The Elves don't care about distant trees taller than those found by the rules above; the proposed tree house has large eaves to keep it dry, so they wouldn't be able to see higher than the tree house anyway.
+
+In the example above, consider the middle 5 in the second row:
+
+30373
+25512
+65332
+33549
+35390
+Looking up, its view is not blocked; it can see 1 tree (of height 3).
+Looking left, its view is blocked immediately; it can see only 1 tree (of height 5, right next to it).
+Looking right, its view is not blocked; it can see 2 trees.
+Looking down, its view is blocked eventually; it can see 2 trees (one of height 3, then the tree of height 5 that blocks its view).
+A tree's scenic score is found by multiplying together its viewing distance in each of the four directions. For this tree, this is 4 (found by multiplying 1 * 1 * 2 * 2).
+
+However, you can do even better: consider the tree of height 5 in the middle of the fourth row:
+
+30373
+25512
+65332
+33549
+35390
+Looking up, its view is blocked at 2 trees (by another tree with a height of 5).
+Looking left, its view is not blocked; it can see 2 trees.
+Looking down, its view is also not blocked; it can see 1 tree.
+Looking right, its view is blocked at 2 trees (by a massive tree of height 9).
+This tree's scenic score is 8 (2 * 2 * 1 * 2); this is the ideal spot for the tree house.
+
+Consider each tree on your map. What is the highest scenic score possible for any tree?
+
+Your puzzle answer was 536625.
+
+Both parts of this puzzle are complete! They provide two gold stars: **
+
+At this point, you should return to your Advent calendar and try another puzzle.
+
+If you still want to see it, you can get your puzzle input.
+
+
+
+
+
+
+__________________________________________________________________________________________________________
+
+
+
+--- День 8: Домик на дереве ---
+Экспедиция натыкается на своеобразный участок высоких деревьев, аккуратно посаженных в сетку. Эльфы объясняют, что предыдущая экспедиция посадила эти деревья в рамках лесовосстановления. Теперь им любопытно, будет ли это хорошим местом для дома на дереве .
+
+Во-первых, определите, достаточно ли здесь древесного покрова, чтобы скрыть дом на дереве . Для этого нужно посчитать количество деревьев, которые видны из-за пределов сетки при взгляде прямо вдоль строки или столбца.
+
+Эльфы уже запустили квадрокоптер для создания карты с высотой каждого дерева ( ваш ввод головоломки ). Например:
+
+30373
+25512
+65332
+33549
+35390
+Каждое дерево представлено одной цифрой, значением которой является его высота, где 0самое короткое и 9самое высокое.
+
+Дерево видимо , если все остальные деревья между ним и краем сетки короче его. Рассматривайте деревья только в одной строке или столбце; то есть смотреть только вверх, вниз, влево или вправо от любого данного дерева.
+
+Все деревья вокруг края сетки видны — поскольку они уже находятся на краю, нет деревьев, которые блокировали бы обзор. В этом примере остается рассмотреть только девять внутренних деревьев :
+
+Верхний левый 5виден слева и сверху. (Его не видно ни справа, ни снизу, так как другие высокие деревья 5мешают.)
+Верх-средний 5виден сверху и справа.
+Верхний правый 1не виден ни с какого направления; чтобы он был виден, между ним и краем должны быть только деревья высотой 0 .
+Левая середина 5видна , но только справа.
+Центр 3не виден ни с какого направления; 2чтобы он был виден, между ним и краем должны быть только деревья максимальной высоты .
+Правая середина 3видна справа .
+В нижнем ряду середина видна5 , а и нет.34
+С 16 деревьями, видимыми на краю, и еще 5 видимыми внутри, в общей сложности 21видны деревья в этом расположении.
+
+Рассмотрите свою карту; сколько деревьев видно из-за пределов сетки?
+
+Ваш ответ на загадку был 1679.
+
+--- Часть вторая ---
+Довольные количеством доступного древесного покрова, эльфам просто нужно знать, где лучше всего построить свой дом на дереве: они хотели бы иметь возможность видеть много деревьев .
+
+Чтобы измерить расстояние просмотра от данного дерева, посмотрите вверх, вниз, влево и вправо от этого дерева; остановитесь, если вы дойдете до края или до первого дерева, которое той же высоты или выше, чем рассматриваемое дерево. (Если дерево находится прямо на краю, по крайней мере одно из расстояний его просмотра будет равно нулю.)
+
+Эльфам нет дела до далеких деревьев, которые выше, чем те, которые найдены по вышеприведенным правилам; Предлагаемый дом на дереве имеет большие карнизы , чтобы он оставался сухим, поэтому они все равно не смогут видеть выше дома на дереве.
+
+В приведенном выше примере рассмотрим середину 5во второй строке:
+
+30373
+25512
+65332
+33549
+35390
+Глядя вверх, его обзор не загораживает; он может видеть 1дерево (высоты 3).
+Глядя налево, его обзор немедленно блокируется; он может видеть только 1дерево (высоты 5, прямо рядом с ним).
+Глядя вправо, его обзор не заблокирован; он может видеть 2деревья.
+Глядя вниз, его обзор в конечном итоге блокируется; он может видеть 2деревья (одно высотой 3, затем дерево высоты 5, которое блокирует его обзор).
+Живописная оценка дерева определяется путем умножения расстояния его просмотра в каждом из четырех направлений. Для этого дерева это 4(найдено умножением 1 * 1 * 2 * 2).
+
+Однако можно поступить еще лучше: рассмотрим дерево высоты 5в середине четвертого ряда:
+
+30373
+25512
+65332
+33549
+35390
+Глядя вверх, его вид загораживают 2деревья (другое дерево высотой 5).
+Глядя налево, его обзор не заблокирован; он может видеть 2деревья.
+Глядя вниз, его обзор также не загораживает; он может видеть 1дерево.
+Глядя вправо, его вид загораживают 2деревья (массивное дерево высотой 9).
+Сценическая оценка этого дерева 8( 2 * 2 * 1 * 2); это идеальное место для дома на дереве.
+
+Рассмотрите каждое дерево на вашей карте. Какова наивысшая живописная оценка, возможная для любого дерева?
+
+Ваш ответ на загадку был 536625.
+
+Обе части этой головоломки завершены! Они дают две золотые звезды: **
+
+На этом этапе вы должны вернуться к своему адвент-календарю и попробовать другую головоломку.
+
+Если вы все еще хотите увидеть это, вы можете получить входную информацию для головоломки .
